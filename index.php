@@ -22,5 +22,26 @@
         echo strlen($text);  
         ?>
     </p>
+    <!-- Una parola da censurare viene passata dall'utente tramite parametro GET. -->
+    <p>
+        <?php 
+        $bad_word = $_GET["word"];
+        $censorship = "***";
+         ?>
+    </p>
+    <!-- Stampare di nuovo il paragrafo e la sua lunghezza, 
+    dopo aver sostituito con tre asterischi (***) tutte le occorrenze della parola da censurare. -->
+    <p>
+        <?php  $text2 = str_replace($bad_word, $censorship, $text);
+        echo $text2;
+         ?>
+    </p>
+    <p>
+        <?php 
+        echo $message;
+        echo strlen($text2); 
+        
+        ?>
+    </p>
 </body>
 </html>
