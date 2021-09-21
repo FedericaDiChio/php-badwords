@@ -39,8 +39,7 @@
     <p>
         <?php 
         echo $message;
-        echo strlen($text2); 
-        
+        echo strlen($text2);    
         ?>
     </p>
 </body>
